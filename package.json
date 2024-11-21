@@ -1,0 +1,25 @@
+{
+    "name": "max-min-comparison",
+    "version": "1.0.0",
+    "description": "Web-based app to compare brute force and divide-and-conquer algorithms for finding maximum and minimum in arrays.",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "keywords": [
+      "divide-and-conquer",
+      "algorithm",
+      "max-min",
+      "comparison",
+      "nodejs",
+      "chartjs"
+    ],
+    "author": "J Venkatesh",
+    "license": "CSE/CIT",
+    "dependencies": {
+      "body-parser": "^1.20.3",
+      "cors": "^2.8.5",
+      "express": "^4.21.1"
+    }
+  }
+  
