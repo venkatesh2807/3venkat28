@@ -8,20 +8,40 @@ document.getElementById("sizeForm").addEventListener("submit", async function (e
         return;
     }
 
-    try {
-        const response = await fetch("https://3venkat28.vercel.app/", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ sizes }),
-        });
+    // try {
+    //     const response = await fetch("https://3venkat28.vercel.app/", {
+    //         method: "POST",
+    //         headers: {
+    //             "Content-Type": "application/json",
+    //         },
+    //         body: JSON.stringify({ sizes }),
+    //     });
 
-        const { results } = await response.json();
-        openChartModal(results);
-    } catch (error) {
-        console.error("Error:", error);
-    }
+    //     const { results } = await response.json();
+    //     openChartModal(results);
+    // } catch (error) {
+    //     console.error("Error:", error);
+    // }
+
+    fetch("https://3venkat28.vercel.app/", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ sizes }),
+    })
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error("Network response was not ok");
+            }
+            return response.json();
+        })
+        .then(({ results }) => {
+            openChartModal(results);
+        })
+        .catch((error) => {
+            console.error("Error:", error);
+        });
 });
 
 function openChartModal(results) {
