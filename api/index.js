@@ -6,7 +6,7 @@ const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, '../public')));
 
 // Helper to generate a random array of given size
 function randomArray(size) {
@@ -71,7 +71,9 @@ app.post("/compare", (req, res) => {
     res.json({ results });
 });
 
-const PORT = 3000;
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
-});
+// const PORT = 3000;
+// app.listen(PORT, () => {
+//     console.log(`Server is running on http://localhost:${PORT}`);
+// });
+
+module.exports = app;
