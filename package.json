@@ -2,9 +2,9 @@
     "name": "max-min-comparison",
     "version": "1.0.0",
     "description": "Web-based app to compare brute force and divide-and-conquer algorithms for finding maximum and minimum in arrays.",
-    "main": "server.js",
+    "main": "api/index.js",
     "scripts": {
-      "start": "node server.js"
+      "start": "node api/index.js"
     },
     "keywords": [
       "divide-and-conquer",
