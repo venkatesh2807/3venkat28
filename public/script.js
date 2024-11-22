@@ -23,7 +23,7 @@ document.getElementById("sizeForm").addEventListener("submit", async function (e
     //     console.error("Error:", error);
     // }
 
-    fetch("https://3venkat28.vercel.app/api", {
+    fetch("/compare", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
