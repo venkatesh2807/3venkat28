@@ -9,7 +9,7 @@ document.getElementById("sizeForm").addEventListener("submit", async function (e
     }
 
     try {
-        const response = await fetch("http://localhost:3000/compare", {
+        const response = await fetch("https://3venkat28.vercel.app/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
